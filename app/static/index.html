@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FruitVision</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p class="eyebrow">COMPUTER VISION DEMO</p>
+      <h1>FruitVision</h1>
+      <p class="subtitle">Upload an image and the model will classify it as an apple, durian, or banana.</p>
+    </header>
+    <div class="chips" aria-label="Supported classes"><span>Apple</span><span>Durian</span><span>Banana</span></div>
+    <label class="upload" for="fileInput">
+      <span class="upload-icon">↑</span>
+      <strong id="uploadTitle">Choose an image</strong>
+      <small>PNG, JPG, JPEG, WEBP</small>
+      <input id="fileInput" type="file" accept="image/*">
+    </label>
+    <div id="previewBox" class="preview-box" hidden><img id="preview" alt="Selected fruit image preview"></div>
+    <div class="actions">
+      <button id="predictButton" disabled>Classify image</button>
+      <button id="resetButton" class="secondary" type="button">Reset</button>
+    </div>
+    <section id="result" class="result" hidden aria-live="polite"></section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
